@@ -94,7 +94,16 @@ export default function Home() {
           link2='sobre'
           link3='bikes'
         />
-        <Main>
+        <Main
+        as={motion.section}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+        variants={{
+          show: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        initial='hidden'
+        animate='show'
+      >
         <SectionHome>
             <div className='div-title-home'>
               <h2>Alugue uma bicicleta e explore a cidade.</h2>
